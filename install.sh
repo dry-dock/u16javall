@@ -29,7 +29,10 @@ echo "deb http://security.ubuntu.com/ubuntu xenial main restricted universe mult
 echo "deb http://security.ubuntu.com/ubuntu xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
 apt-get update
 
-for file in /u16javall/version/*.sh;
-do
-  $file
-done
+#for file in /u16javall/version/*.sh;
+#do
+ # $file
+#done
+
+
+. /u16javall/version/openjdk9.sh
