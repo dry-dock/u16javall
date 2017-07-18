@@ -7,10 +7,10 @@ apt-get clean
 apt-get update
 
 echo "================ Installing gradle ================="
-wget -nv https://services.gradle.org/distributions/gradle-3.1-all.zip
-unzip -qq gradle-3.1-all.zip -d /usr/local && rm -f gradle-3.1-all.zip
-ln -fs /usr/local/gradle-3.1/bin/gradle /usr/bin
-echo 'export PATH=$PATH:/usr/local/gradle-3.1/bin' >> $HOME/.bashrc
+wget -nv https://services.gradle.org/distributions/gradle-4.0.1-all.zip
+unzip -qq gradle-4.0.1-all.zip -d /usr/local && rm -f gradle-4.0.1-all.zip
+ln -fs /usr/local/gradle-4.0.1/bin/gradle /usr/bin
+echo 'export PATH=$PATH:/usr/local/gradle-4.0.1/bin' >> $HOME/.bashrc
 
 echo "================ Installing apache-maven-3.3.9 ================="
 wget -nv http://redrockdigimark.com/apachemirror/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz

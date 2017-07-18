@@ -5,8 +5,9 @@ Shippable CI image for Java on Ubuntu 16.04. Available jdk versions:
 
 1. openjdk7
 2. openjdk8
-3. oraclejdk7
+3. openjdk9
 4. oraclejdk8
+5. oraclejdk9
 
 **Services:**
 
@@ -24,4 +25,3 @@ Shippable CI image for Java on Ubuntu 16.04. Available jdk versions:
 12. rethinkdb 2.3
 13. riak 2.2
 14. cassandra 3.9
-
