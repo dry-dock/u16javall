@@ -33,6 +33,3 @@ for file in /u16javall/version/*.sh;
 do
   $file
 done
-
-
-
