@@ -8,5 +8,3 @@ tar -xzf jdk-9+178_linux-x64_bin.tar.gz
 mv jdk-9 java-9-oracle
 update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-9-oracle/bin/java 1
 update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-9-oracle/bin/javac 1
-update-alternatives --set java /usr/lib/jvm/java-9-oracle/bin/java
-update-alternatives --set javac /usr/lib/jvm/java-9-oracle/bin/javac
