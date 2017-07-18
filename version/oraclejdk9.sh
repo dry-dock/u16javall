@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-echo "================ Installing oracle-java8-installer ================="
+echo "================ Installing oracle-java9-installer ================="
 
 cd /usr/lib/jvm
 wget http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x64_bin.tar.gz
