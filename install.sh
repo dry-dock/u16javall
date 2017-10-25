@@ -7,10 +7,10 @@ apt-get clean
 apt-get update
 
 echo "================ Installing gradle ================="
-wget -nv https://services.gradle.org/distributions/gradle-4.0.1-all.zip
-unzip -qq gradle-4.0.1-all.zip -d /usr/local && rm -f gradle-4.0.1-all.zip
-ln -fs /usr/local/gradle-4.0.1/bin/gradle /usr/bin
-echo 'export PATH=$PATH:/usr/local/gradle-4.0.1/bin' >> $HOME/.bashrc
+wget -nv https://services.gradle.org/distributions/gradle-4.2.1-all.zip
+unzip -qq gradle-4.2.1-all.zip -d /usr/local && rm -f gradle-4.2.1-all.zip
+ln -fs /usr/local/gradle-4.2.1/bin/gradle /usr/bin
+echo 'export PATH=$PATH:/usr/local/gradle-4.2.1/bin' >> $HOME/.bashrc
 
 echo "================ Installing apache-maven-3.3.9 ================="
 wget -nv http://redrockdigimark.com/apachemirror/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
@@ -41,6 +41,17 @@ wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
 unzip -q sdk-tools-linux-3859397.zip
 mkdir -p /opt/android-sdk
 mv tools/ /opt/android-sdk/
+
+ln -fs /opt/android-sdk/tools/bin/sdkmanager /usr/bin
+
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export PATH=$PATH:/usr/lib/jvm/java-8-oracle/bin
+export ANDROID_HOME=/opt/android-sdk
+export ANDROID_SDK=/opt/android-sdk/tools/bin
+
+mkdir -p ~/.android
+touch /root/.android/repositories.cfg
+yes | sdkmanager --licenses
 
 echo 'export ANDROID_HOME=/opt/android-sdk' >> $HOME/.bashrc
 echo 'export ANDROID_SDK=/opt/android-sdk/tools/bin' >> $HOME/.bashrc
