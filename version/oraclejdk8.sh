@@ -11,5 +11,5 @@ update-alternatives --set java /usr/lib/jvm/java-8-oracle/jre/bin/java
 update-alternatives --set javac /usr/lib/jvm/java-8-oracle/bin/javac
 update-alternatives --set javaws /usr/lib/jvm/java-8-oracle/jre/bin/javaws
 
-echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> $HOME/.bashrc
-echo 'export PATH=$PATH:/usr/lib/jvm/java-8-oracle/bin' >> $HOME/.bashrc
+echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /etc/drydock/.env
+echo 'export PATH=$PATH:/usr/lib/jvm/java-8-oracle/bin' >> /etc/drydock/.env
