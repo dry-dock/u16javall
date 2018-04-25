@@ -7,7 +7,7 @@ Shippable CI image for Java on Ubuntu 16.04. Available jdk versions:
 2. openjdk8
 3. openjdk9
 4. oraclejdk8
-5. oraclejdk9
+5. oraclejdk10
 
 **Services:**
 
