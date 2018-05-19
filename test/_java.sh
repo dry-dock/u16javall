@@ -24,8 +24,8 @@ printf "\n"
 java -version
 printf "\n"
 
-echo "update-alternatives --set java /usr/lib/jvm/java-9-oracle/bin/java"
-update-alternatives --set java  /usr/lib/jvm/java-9-oracle/bin/java 
+echo "update-alternatives --set java /usr/lib/jvm/java-10-oracle/bin/java"
+update-alternatives --set java  /usr/lib/jvm/java-10-oracle/bin/java 
 printf "\n"
 java -version
 printf "\n"
