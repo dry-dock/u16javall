@@ -7,23 +7,23 @@ apt-get clean
 apt-get update
 
 echo "================ Installing gradle ================="
-wget -nv https://services.gradle.org/distributions/gradle-4.7-all.zip
-unzip -qq gradle-4.7-all.zip -d /usr/local && rm -f gradle-4.7-all.zip
-ln -fs /usr/local/gradle-4.7/bin/gradle /usr/bin
-echo 'export PATH=$PATH:/usr/local/gradle-4.7/bin' >> /etc/drydock/.env
+wget -nv https://services.gradle.org/distributions/gradle-4.8.1-all.zip
+unzip -qq gradle-4.8.1-all.zip -d /usr/local && rm -f gradle-4.8.1-all.zip
+ln -fs /usr/local/gradle-4.8.1/bin/gradle /usr/bin
+echo 'export PATH=$PATH:/usr/local/gradle-4.8.1/bin' >> /etc/drydock/.env
 
-echo "================ Installing apache-maven-3.5.3 ================="
-wget -nv http://redrockdigimark.com/apachemirror/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
-tar xzf apache-maven-3.5.3-bin.tar.gz -C /usr/local && rm -f apache-maven-3.5.3-bin.tar.gz
-ln -fs /usr/local/apache-maven-3.5.3/bin/mvn /usr/bin
-echo 'export PATH=$PATH:/usr/local/apache-maven-3.5.3/bin' >> /etc/drydock/.env
+echo "================ Installing apache-maven-3.5.4 ================="
+wget -nv http://redrockdigimark.com/apachemirror/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+tar xzf apache-maven-3.5.4-bin.tar.gz -C /usr/local && rm -f apache-maven-3.5.4-bin.tar.gz
+ln -fs /usr/local/apache-maven-3.5.4/bin/mvn /usr/bin
+echo 'export PATH=$PATH:/usr/local/apache-maven-3.5.4/bin' >> /etc/drydock/.env
 
-echo "================ Installing apache-ant-1.10.3 ================="
-wget -nv https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.3-bin.tar.gz
-tar xzf apache-ant-1.10.3-bin.tar.gz -C /usr/local && rm -f apache-ant-1.10.3-bin.tar.gz
-ln -fs /usr/local/apache-ant-1.10.3/bin/ant /usr/bin
-echo 'export ANT_HOME=/usr/local/apache-ant-1.10.3' >> /etc/drydock/.env
-echo 'export PATH=$PATH:/usr/local/apache-ant-1.10.3/bin' >> /etc/drydock/.env
+echo "================ Installing apache-ant-1.10.4 ================="
+wget -nv https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.4-bin.tar.gz
+tar xzf apache-ant-1.10.4-bin.tar.gz -C /usr/local && rm -f apache-ant-1.10.4-bin.tar.gz
+ln -fs /usr/local/apache-ant-1.10.4/bin/ant /usr/bin
+echo 'export ANT_HOME=/usr/local/apache-ant-1.10.4' >> /etc/drydock/.env
+echo 'export PATH=$PATH:/usr/local/apache-ant-1.10.4/bin' >> /etc/drydock/.env
 
 echo "deb http://security.ubuntu.com/ubuntu xenial main restricted universe multiverse" >> /etc/apt/sources.list
 echo "deb http://security.ubuntu.com/ubuntu xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
