@@ -1,5 +1,7 @@
 #!/bin/bash -e
-echo "================ Installing openjdk-10-jdk ================="
+
+export OPENJDK_VERSION="10.0.2"
+echo "================ Installing openjdk $OPENJDK_VERSION ================="
 export OPENJDK_VERSION="10.0.2"
 mkdir -p /usr/lib/jvm && cd /usr/lib/jvm
 wget "https://download.java.net/java/GA/jdk10/$OPENJDK_VERSION/19aef61b38124481863b1413dce1855f/13/openjdk-"$OPENJDK_VERSION"_linux-x64_bin.tar.gz"
