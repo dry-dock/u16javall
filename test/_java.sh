@@ -12,13 +12,14 @@ printf "\n"
 java -version
 printf "\n"
 
-shipctl jdk set openjdk9
+shipctl jdk set openjdk10
 printf "\n"
 java -version
 printf "\n"
 
-shipctl jdk set openjdk10
-printf "\n"
+shipctl jdk set openjdk11
+java -version
+printf "\n"shipctl jdk set openjdk11
 java -version
 printf "\n"
 
@@ -27,7 +28,7 @@ printf "\n"
 java -version
 printf "\n"
 
-shipctl jdk set oraclejdk10
+shipctl jdk set oraclejdk11
 printf "\n"
 java -version
 printf "\n"
