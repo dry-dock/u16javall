@@ -20,7 +20,7 @@ tar xzf apache-maven-$APACHE_MAVEN-bin.tar.gz -C /usr/local && rm -f apache-mave
 ln -fs /usr/local/apache-maven-$APACHE_MAVEN/bin/mvn /usr/bin
 echo 'export PATH=$PATH:/usr/local/apache-maven-$APACHE_MAVEN/bin' >> /etc/drydock/.env
 
-APACHE_ANT=1.10.5
+APACHE_ANT=1.9.13
 echo "================ Installing apache-ant $APACHE_ANT ================="
 wget -nv https://archive.apache.org/dist/ant/binaries/apache-ant-$APACHE_ANT-bin.tar.gz
 tar xzf apache-ant-$APACHE_ANT-bin.tar.gz -C /usr/local && rm -f apache-ant-$APACHE_ANT-bin.tar.gz
