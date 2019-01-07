@@ -6,7 +6,7 @@ mkdir -p /var/lib/apt/lists/partial
 apt-get clean
 apt-get update
 
-GRADLE_VERSION="4.10.2"
+GRADLE_VERSION="5.1"
 echo "================ Installing gradle $GRADLE_VERSION ================="
 wget -nv https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-all.zip
 unzip -qq gradle-$GRADLE_VERSION-all.zip -d /usr/local && rm -f gradle-$GRADLE_VERSION-all.zip
