@@ -6,7 +6,7 @@ mkdir -p /var/lib/apt/lists/partial
 apt-get clean
 apt-get update
 
-url -s "https://get.sdkman.io" | bash
+curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> /etc/drydock/.env
 
