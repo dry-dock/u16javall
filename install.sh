@@ -6,27 +6,17 @@ mkdir -p /var/lib/apt/lists/partial
 apt-get clean
 apt-get update
 
-GRADLE_VERSION="5.1"
-echo "================ Installing gradle $GRADLE_VERSION ================="
-wget -nv https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-all.zip
-unzip -qq gradle-$GRADLE_VERSION-all.zip -d /usr/local && rm -f gradle-$GRADLE_VERSION-all.zip
-ln -fs /usr/local/gradle-$GRADLE_VERSION/bin/gradle /usr/bin
-echo 'export PATH=$PATH:/usr/local/gradle-$GRADLE_VERSION/bin' >> /etc/drydock/.env
+url -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> /etc/drydock/.env
 
-APACHE_MAVEN="3.6.0"
-echo "================ Installing apache-maven $APACHE_MAVEN ================="
-wget http://www-eu.apache.org/dist/maven/maven-3/$APACHE_MAVEN/binaries/apache-maven-$APACHE_MAVEN-bin.tar.gz
-tar xzf apache-maven-$APACHE_MAVEN-bin.tar.gz -C /usr/local && rm -f apache-maven-$APACHE_MAVEN-bin.tar.gz
-ln -fs /usr/local/apache-maven-$APACHE_MAVEN/bin/mvn /usr/bin
-echo 'export PATH=$PATH:/usr/local/apache-maven-$APACHE_MAVEN/bin' >> /etc/drydock/.env
+sdk install gradle 4.10.3
+yes | sdk install gradle 5.1
 
-APACHE_ANT=1.9.13
-echo "================ Installing apache-ant $APACHE_ANT ================="
-wget -nv https://archive.apache.org/dist/ant/binaries/apache-ant-$APACHE_ANT-bin.tar.gz
-tar xzf apache-ant-$APACHE_ANT-bin.tar.gz -C /usr/local && rm -f apache-ant-$APACHE_ANT-bin.tar.gz
-ln -fs /usr/local/apache-ant-$APACHE_ANT/bin/ant /usr/bin
-echo 'export ANT_HOME=/usr/local/apache-ant-$APACHE_ANT' >> /etc/drydock/.env
-echo 'export PATH=$PATH:/usr/local/apache-ant-$APACHE_ANT/bin' >> /etc/drydock/.env
+sdk install maven 3.6.0
+
+sdk install ant 1.9.9
+yes | sdk install ant 1.10.1
 
 echo "deb http://security.ubuntu.com/ubuntu xenial main restricted universe multiverse" >> /etc/apt/sources.list
 echo "deb http://security.ubuntu.com/ubuntu xenial-security main restricted universe multiverse" >> /etc/apt/sources.list
