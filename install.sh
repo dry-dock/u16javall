@@ -11,7 +11,7 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> /etc/drydock/.env
 
 sdk install gradle 4.10.3
-yes | sdk install gradle 5.1
+yes | sdk install gradle 5.2.1
 
 sdk install maven 3.6.0
 
